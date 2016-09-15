@@ -1,0 +1,10 @@
+C:\Users\m.breen\Documents\Visual Studio 2015\Projects\Trivia\C#\Trivia\Trivia.Tests\bin\Debug\Trivia.Tests.dll
+C:\Users\m.breen\Documents\Visual Studio 2015\Projects\Trivia\C#\Trivia\Trivia.Tests\bin\Debug\Trivia.Tests.pdb
+C:\Users\m.breen\Documents\Visual Studio 2015\Projects\Trivia\C#\Trivia\Trivia.Tests\bin\Debug\nunit.framework.dll
+C:\Users\m.breen\Documents\Visual Studio 2015\Projects\Trivia\C#\Trivia\Trivia.Tests\bin\Debug\TestStack.BDDfy.dll
+C:\Users\m.breen\Documents\Visual Studio 2015\Projects\Trivia\C#\Trivia\Trivia.Tests\bin\Debug\Trivia.exe
+C:\Users\m.breen\Documents\Visual Studio 2015\Projects\Trivia\C#\Trivia\Trivia.Tests\bin\Debug\Trivia.pdb
+C:\Users\m.breen\Documents\Visual Studio 2015\Projects\Trivia\C#\Trivia\Trivia.Tests\bin\Debug\nunit.framework.xml
+C:\Users\m.breen\Documents\Visual Studio 2015\Projects\Trivia\C#\Trivia\Trivia.Tests\obj\Debug\Trivia.Tests.csprojResolveAssemblyReference.cache
+C:\Users\m.breen\Documents\Visual Studio 2015\Projects\Trivia\C#\Trivia\Trivia.Tests\obj\Debug\Trivia.Tests.dll
+C:\Users\m.breen\Documents\Visual Studio 2015\Projects\Trivia\C#\Trivia\Trivia.Tests\obj\Debug\Trivia.Tests.pdb

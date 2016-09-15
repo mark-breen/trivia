@@ -2,3 +2,22 @@
 # in a .gitignore file inside the root folder
 # of that language. See Scala/.gitignore for
 # an example. Thanks.
+C#/Trivia/packages/NUnit.3.4.1/lib/net20/nunit.framework.xml
+C#/Trivia/packages/NUnit.3.4.1/lib/net35/nunit.framework.xml
+C#/Trivia/packages/NUnit.3.4.1/lib/net40/nunit.framework.xml
+C#/Trivia/packages/NUnit.3.4.1/lib/net45/nunit.framework.xml
+C#/Trivia/packages/NUnit.3.4.1/lib/dotnet/nunit.framework.xml
+C#/Trivia/packages/NUnit.3.4.1/CHANGES.txt
+C#/Trivia/packages/NUnit.3.4.1/LICENSE.txt
+C#/Trivia/packages/NUnit.3.4.1/NOTICES.txt
+C#/Trivia/packages/NUnit.3.4.1/NUnit.3.4.1.nupkg
+C#/Trivia/Trivia.v2.ncrunchsolution
+C#/Trivia/Trivia/Trivia.v2.ncrunchproject
+C#/Trivia/Trivia.Tests/Trivia.Tests.v2.ncrunchproject
+C#/Trivia/Trivia.Tests/bin/Debug/nunit.framework.xml
+C#/Trivia/Trivia.Tests/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
+C#/Trivia/Trivia.Tests/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+C#/Trivia/packages/NUnit.3.4.1/lib/portable-net45+win8+wp8+wpa81+Xamarin.Mac+MonoAndroid10+MonoTouch10+Xamarin.iOS10/nunit.framework.xml
+C#/Trivia/Trivia.Tests/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
+C#/Trivia/Trivia.Tests/obj/Debug/build.force
+C#/Trivia/packages/TestStack.BDDfy.4.3.1/TestStack.BDDfy.4.3.1.nupkg
