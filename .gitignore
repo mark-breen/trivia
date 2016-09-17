@@ -21,3 +21,7 @@ C#/Trivia/packages/NUnit.3.4.1/lib/portable-net45+win8+wp8+wpa81+Xamarin.Mac+Mon
 C#/Trivia/Trivia.Tests/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
 C#/Trivia/Trivia.Tests/obj/Debug/build.force
 C#/Trivia/packages/TestStack.BDDfy.4.3.1/TestStack.BDDfy.4.3.1.nupkg
+C#/Trivia/packages/ApprovalTests.3.0.11/ApprovalTests.3.0.11.nupkg
+C#/Trivia/packages/ApprovalTests.3.0.11/lib/net40/ApprovalTests.XML
+C#/Trivia/packages/ApprovalUtilities.3.0.01/ApprovalUtilities.3.0.01.nupkg
+C#/Trivia/packages/ApprovalUtilities.3.0.01/lib/net35/ApprovalUtilities.XML
