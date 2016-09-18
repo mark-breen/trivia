@@ -1,0 +1,6 @@
+﻿Bob was added
+They are player number 1
+Jane was added
+They are player number 2
+Fred was added
+They are player number 3

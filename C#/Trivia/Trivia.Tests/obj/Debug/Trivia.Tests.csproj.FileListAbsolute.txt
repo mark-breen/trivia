@@ -8,3 +8,12 @@ C:\Users\m.breen\Documents\Visual Studio 2015\Projects\Trivia\C#\Trivia\Trivia.T
 C:\Users\m.breen\Documents\Visual Studio 2015\Projects\Trivia\C#\Trivia\Trivia.Tests\obj\Debug\Trivia.Tests.csprojResolveAssemblyReference.cache
 C:\Users\m.breen\Documents\Visual Studio 2015\Projects\Trivia\C#\Trivia\Trivia.Tests\obj\Debug\Trivia.Tests.dll
 C:\Users\m.breen\Documents\Visual Studio 2015\Projects\Trivia\C#\Trivia\Trivia.Tests\obj\Debug\Trivia.Tests.pdb
+C:\Users\m.breen\Documents\Visual Studio 2015\Projects\Trivia\C#\Trivia\Trivia.Tests\bin\Debug\ApprovalTests.dll
+C:\Users\m.breen\Documents\Visual Studio 2015\Projects\Trivia\C#\Trivia\Trivia.Tests\bin\Debug\ApprovalUtilities.dll
+C:\Users\m.breen\Documents\Visual Studio 2015\Projects\Trivia\C#\Trivia\Trivia.Tests\bin\Debug\Microsoft.ReportViewer.WinForms.dll
+C:\Users\m.breen\Documents\Visual Studio 2015\Projects\Trivia\C#\Trivia\Trivia.Tests\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\m.breen\Documents\Visual Studio 2015\Projects\Trivia\C#\Trivia\Trivia.Tests\bin\Debug\ApprovalTests.xml
+C:\Users\m.breen\Documents\Visual Studio 2015\Projects\Trivia\C#\Trivia\Trivia.Tests\bin\Debug\ApprovalUtilities.xml
+C:\Users\m.breen\Documents\Visual Studio 2015\Projects\Trivia\C#\Trivia\Trivia.Tests\bin\Debug\Microsoft.ReportViewer.WinForms.xml
+C:\Users\m.breen\Documents\Visual Studio 2015\Projects\Trivia\C#\Trivia\Trivia.Tests\bin\Debug\ApprovalUtilities.Net45.dll
+C:\Users\m.breen\Documents\Visual Studio 2015\Projects\Trivia\C#\Trivia\Trivia.Tests\bin\Debug\ApprovalUtilities.Net45.xml

@@ -25,3 +25,6 @@ C#/Trivia/packages/ApprovalTests.3.0.11/ApprovalTests.3.0.11.nupkg
 C#/Trivia/packages/ApprovalTests.3.0.11/lib/net40/ApprovalTests.XML
 C#/Trivia/packages/ApprovalUtilities.3.0.01/ApprovalUtilities.3.0.01.nupkg
 C#/Trivia/packages/ApprovalUtilities.3.0.01/lib/net35/ApprovalUtilities.XML
+**.GetSnapshot.received.txt
+C#/Trivia/packages/**
+C#/Trivia/Trivia.Tests/bin/Debug/**

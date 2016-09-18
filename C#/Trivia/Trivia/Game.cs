@@ -211,7 +211,7 @@ namespace UglyTrivia
         }
 
         // Testing seam
-        protected void OutputMessage(string message)
+        protected virtual void OutputMessage(string message)
         {
             Console.WriteLine(message);
         }

@@ -1,0 +1,627 @@
+﻿Bob was added
+They are player number 1
+Jane was added
+They are player number 2
+Fred was added
+They are player number 3
+Bob is the current player
+They have rolled a 2
+Bob's new location is 2
+The category is Sports
+Sports Question 0
+Question was incorrectly answered
+Bob was sent to the penalty box
+Jane is the current player
+They have rolled a 4
+Jane's new location is 4
+The category is Pop
+Pop Question 0
+Answer was corrent!!!!
+Jane now has 1 Gold Coins.
+Fred is the current player
+They have rolled a 6
+Fred's new location is 6
+The category is Sports
+Sports Question 1
+Answer was corrent!!!!
+Fred now has 1 Gold Coins.
+Bob is the current player
+They have rolled a 1
+Bob is getting out of the penalty box
+Bob's new location is 3
+The category is Rock
+Rock Question 0
+Question was incorrectly answered
+Bob was sent to the penalty box
+Jane is the current player
+They have rolled a 3
+Jane's new location is 7
+The category is Rock
+Rock Question 1
+Question was incorrectly answered
+Jane was sent to the penalty box
+Fred is the current player
+They have rolled a 5
+Fred's new location is 11
+The category is Rock
+Rock Question 2
+Answer was corrent!!!!
+Fred now has 2 Gold Coins.
+Bob is the current player
+They have rolled a 3
+Bob is getting out of the penalty box
+Bob's new location is 6
+The category is Sports
+Sports Question 2
+Question was incorrectly answered
+Bob was sent to the penalty box
+Jane is the current player
+They have rolled a 0
+Jane is not getting out of the penalty box
+Question was incorrectly answered
+Jane was sent to the penalty box
+Fred is the current player
+They have rolled a 2
+Fred's new location is 1
+The category is Science
+Science Question 0
+Question was incorrectly answered
+Fred was sent to the penalty box
+Bob is the current player
+They have rolled a 4
+Bob is not getting out of the penalty box
+Jane is the current player
+They have rolled a 6
+Jane is not getting out of the penalty box
+Fred is the current player
+They have rolled a 1
+Fred is getting out of the penalty box
+Fred's new location is 2
+The category is Sports
+Sports Question 3
+Question was incorrectly answered
+Fred was sent to the penalty box
+Bob is the current player
+They have rolled a 3
+Bob is getting out of the penalty box
+Bob's new location is 9
+The category is Science
+Science Question 1
+Question was incorrectly answered
+Bob was sent to the penalty box
+Jane is the current player
+They have rolled a 5
+Jane is getting out of the penalty box
+Jane's new location is 0
+The category is Pop
+Pop Question 1
+Answer was correct!!!!
+Jane now has 2 Gold Coins.
+Fred is the current player
+They have rolled a 3
+Fred is getting out of the penalty box
+Fred's new location is 5
+The category is Science
+Science Question 2
+Question was incorrectly answered
+Fred was sent to the penalty box
+Bob is the current player
+They have rolled a 0
+Bob is not getting out of the penalty box
+Question was incorrectly answered
+Bob was sent to the penalty box
+Jane is the current player
+They have rolled a 2
+Jane is not getting out of the penalty box
+Question was incorrectly answered
+Jane was sent to the penalty box
+Fred is the current player
+They have rolled a 4
+Fred is not getting out of the penalty box
+Bob is the current player
+They have rolled a 6
+Bob is not getting out of the penalty box
+Jane is the current player
+They have rolled a 1
+Jane is getting out of the penalty box
+Jane's new location is 1
+The category is Science
+Science Question 3
+Question was incorrectly answered
+Jane was sent to the penalty box
+Fred is the current player
+They have rolled a 3
+Fred is getting out of the penalty box
+Fred's new location is 8
+The category is Pop
+Pop Question 2
+Question was incorrectly answered
+Fred was sent to the penalty box
+Bob is the current player
+They have rolled a 5
+Bob is getting out of the penalty box
+Bob's new location is 2
+The category is Sports
+Sports Question 4
+Answer was correct!!!!
+Bob now has 1 Gold Coins.
+Jane is the current player
+They have rolled a 3
+Jane is getting out of the penalty box
+Jane's new location is 4
+The category is Pop
+Pop Question 3
+Question was incorrectly answered
+Jane was sent to the penalty box
+Fred is the current player
+They have rolled a 0
+Fred is not getting out of the penalty box
+Question was incorrectly answered
+Fred was sent to the penalty box
+Bob is the current player
+They have rolled a 2
+Bob is not getting out of the penalty box
+Question was incorrectly answered
+Bob was sent to the penalty box
+Jane is the current player
+They have rolled a 4
+Jane is not getting out of the penalty box
+Fred is the current player
+They have rolled a 6
+Fred is not getting out of the penalty box
+Bob is the current player
+They have rolled a 1
+Bob is getting out of the penalty box
+Bob's new location is 3
+The category is Rock
+Rock Question 3
+Question was incorrectly answered
+Bob was sent to the penalty box
+Jane is the current player
+They have rolled a 3
+Jane is getting out of the penalty box
+Jane's new location is 7
+The category is Rock
+Rock Question 4
+Question was incorrectly answered
+Jane was sent to the penalty box
+Fred is the current player
+They have rolled a 5
+Fred is getting out of the penalty box
+Fred's new location is 1
+The category is Science
+Science Question 4
+Answer was correct!!!!
+Fred now has 3 Gold Coins.
+Bob is the current player
+They have rolled a 3
+Bob is getting out of the penalty box
+Bob's new location is 6
+The category is Sports
+Sports Question 5
+Question was incorrectly answered
+Bob was sent to the penalty box
+Jane is the current player
+They have rolled a 0
+Jane is not getting out of the penalty box
+Question was incorrectly answered
+Jane was sent to the penalty box
+Fred is the current player
+They have rolled a 2
+Fred is not getting out of the penalty box
+Question was incorrectly answered
+Fred was sent to the penalty box
+Bob is the current player
+They have rolled a 4
+Bob is not getting out of the penalty box
+Jane is the current player
+They have rolled a 6
+Jane is not getting out of the penalty box
+Fred is the current player
+They have rolled a 1
+Fred is getting out of the penalty box
+Fred's new location is 2
+The category is Sports
+Sports Question 6
+Question was incorrectly answered
+Fred was sent to the penalty box
+Bob is the current player
+They have rolled a 3
+Bob is getting out of the penalty box
+Bob's new location is 9
+The category is Science
+Science Question 5
+Question was incorrectly answered
+Bob was sent to the penalty box
+Jane is the current player
+They have rolled a 5
+Jane is getting out of the penalty box
+Jane's new location is 0
+The category is Pop
+Pop Question 4
+Answer was correct!!!!
+Jane now has 3 Gold Coins.
+Fred is the current player
+They have rolled a 3
+Fred is getting out of the penalty box
+Fred's new location is 5
+The category is Science
+Science Question 6
+Question was incorrectly answered
+Fred was sent to the penalty box
+Bob is the current player
+They have rolled a 0
+Bob is not getting out of the penalty box
+Question was incorrectly answered
+Bob was sent to the penalty box
+Jane is the current player
+They have rolled a 2
+Jane is not getting out of the penalty box
+Question was incorrectly answered
+Jane was sent to the penalty box
+Fred is the current player
+They have rolled a 4
+Fred is not getting out of the penalty box
+Bob is the current player
+They have rolled a 6
+Bob is not getting out of the penalty box
+Jane is the current player
+They have rolled a 1
+Jane is getting out of the penalty box
+Jane's new location is 1
+The category is Science
+Science Question 7
+Question was incorrectly answered
+Jane was sent to the penalty box
+Fred is the current player
+They have rolled a 3
+Fred is getting out of the penalty box
+Fred's new location is 8
+The category is Pop
+Pop Question 5
+Question was incorrectly answered
+Fred was sent to the penalty box
+Bob is the current player
+They have rolled a 5
+Bob is getting out of the penalty box
+Bob's new location is 2
+The category is Sports
+Sports Question 7
+Answer was correct!!!!
+Bob now has 2 Gold Coins.
+Jane is the current player
+They have rolled a 3
+Jane is getting out of the penalty box
+Jane's new location is 4
+The category is Pop
+Pop Question 6
+Question was incorrectly answered
+Jane was sent to the penalty box
+Fred is the current player
+They have rolled a 0
+Fred is not getting out of the penalty box
+Question was incorrectly answered
+Fred was sent to the penalty box
+Bob is the current player
+They have rolled a 2
+Bob is not getting out of the penalty box
+Question was incorrectly answered
+Bob was sent to the penalty box
+Jane is the current player
+They have rolled a 4
+Jane is not getting out of the penalty box
+Fred is the current player
+They have rolled a 6
+Fred is not getting out of the penalty box
+Bob is the current player
+They have rolled a 1
+Bob is getting out of the penalty box
+Bob's new location is 3
+The category is Rock
+Rock Question 5
+Question was incorrectly answered
+Bob was sent to the penalty box
+Jane is the current player
+They have rolled a 3
+Jane is getting out of the penalty box
+Jane's new location is 7
+The category is Rock
+Rock Question 6
+Question was incorrectly answered
+Jane was sent to the penalty box
+Fred is the current player
+They have rolled a 5
+Fred is getting out of the penalty box
+Fred's new location is 1
+The category is Science
+Science Question 8
+Answer was correct!!!!
+Fred now has 4 Gold Coins.
+Bob is the current player
+They have rolled a 3
+Bob is getting out of the penalty box
+Bob's new location is 6
+The category is Sports
+Sports Question 8
+Question was incorrectly answered
+Bob was sent to the penalty box
+Jane is the current player
+They have rolled a 0
+Jane is not getting out of the penalty box
+Question was incorrectly answered
+Jane was sent to the penalty box
+Fred is the current player
+They have rolled a 2
+Fred is not getting out of the penalty box
+Question was incorrectly answered
+Fred was sent to the penalty box
+Bob is the current player
+They have rolled a 4
+Bob is not getting out of the penalty box
+Jane is the current player
+They have rolled a 6
+Jane is not getting out of the penalty box
+Fred is the current player
+They have rolled a 1
+Fred is getting out of the penalty box
+Fred's new location is 2
+The category is Sports
+Sports Question 9
+Question was incorrectly answered
+Fred was sent to the penalty box
+Bob is the current player
+They have rolled a 3
+Bob is getting out of the penalty box
+Bob's new location is 9
+The category is Science
+Science Question 9
+Question was incorrectly answered
+Bob was sent to the penalty box
+Jane is the current player
+They have rolled a 5
+Jane is getting out of the penalty box
+Jane's new location is 0
+The category is Pop
+Pop Question 7
+Answer was correct!!!!
+Jane now has 4 Gold Coins.
+Fred is the current player
+They have rolled a 3
+Fred is getting out of the penalty box
+Fred's new location is 5
+The category is Science
+Science Question 10
+Question was incorrectly answered
+Fred was sent to the penalty box
+Bob is the current player
+They have rolled a 0
+Bob is not getting out of the penalty box
+Question was incorrectly answered
+Bob was sent to the penalty box
+Jane is the current player
+They have rolled a 2
+Jane is not getting out of the penalty box
+Question was incorrectly answered
+Jane was sent to the penalty box
+Fred is the current player
+They have rolled a 4
+Fred is not getting out of the penalty box
+Bob is the current player
+They have rolled a 6
+Bob is not getting out of the penalty box
+Jane is the current player
+They have rolled a 1
+Jane is getting out of the penalty box
+Jane's new location is 1
+The category is Science
+Science Question 11
+Question was incorrectly answered
+Jane was sent to the penalty box
+Fred is the current player
+They have rolled a 3
+Fred is getting out of the penalty box
+Fred's new location is 8
+The category is Pop
+Pop Question 8
+Question was incorrectly answered
+Fred was sent to the penalty box
+Bob is the current player
+They have rolled a 5
+Bob is getting out of the penalty box
+Bob's new location is 2
+The category is Sports
+Sports Question 10
+Answer was correct!!!!
+Bob now has 3 Gold Coins.
+Jane is the current player
+They have rolled a 3
+Jane is getting out of the penalty box
+Jane's new location is 4
+The category is Pop
+Pop Question 9
+Question was incorrectly answered
+Jane was sent to the penalty box
+Fred is the current player
+They have rolled a 0
+Fred is not getting out of the penalty box
+Question was incorrectly answered
+Fred was sent to the penalty box
+Bob is the current player
+They have rolled a 2
+Bob is not getting out of the penalty box
+Question was incorrectly answered
+Bob was sent to the penalty box
+Jane is the current player
+They have rolled a 4
+Jane is not getting out of the penalty box
+Fred is the current player
+They have rolled a 6
+Fred is not getting out of the penalty box
+Bob is the current player
+They have rolled a 1
+Bob is getting out of the penalty box
+Bob's new location is 3
+The category is Rock
+Rock Question 7
+Question was incorrectly answered
+Bob was sent to the penalty box
+Jane is the current player
+They have rolled a 3
+Jane is getting out of the penalty box
+Jane's new location is 7
+The category is Rock
+Rock Question 8
+Question was incorrectly answered
+Jane was sent to the penalty box
+Fred is the current player
+They have rolled a 5
+Fred is getting out of the penalty box
+Fred's new location is 1
+The category is Science
+Science Question 12
+Answer was correct!!!!
+Fred now has 5 Gold Coins.
+Bob is the current player
+They have rolled a 3
+Bob is getting out of the penalty box
+Bob's new location is 6
+The category is Sports
+Sports Question 11
+Question was incorrectly answered
+Bob was sent to the penalty box
+Jane is the current player
+They have rolled a 0
+Jane is not getting out of the penalty box
+Question was incorrectly answered
+Jane was sent to the penalty box
+Fred is the current player
+They have rolled a 2
+Fred is not getting out of the penalty box
+Question was incorrectly answered
+Fred was sent to the penalty box
+Bob is the current player
+They have rolled a 4
+Bob is not getting out of the penalty box
+Jane is the current player
+They have rolled a 6
+Jane is not getting out of the penalty box
+Fred is the current player
+They have rolled a 1
+Fred is getting out of the penalty box
+Fred's new location is 2
+The category is Sports
+Sports Question 12
+Question was incorrectly answered
+Fred was sent to the penalty box
+Bob is the current player
+They have rolled a 3
+Bob is getting out of the penalty box
+Bob's new location is 9
+The category is Science
+Science Question 13
+Question was incorrectly answered
+Bob was sent to the penalty box
+Jane is the current player
+They have rolled a 5
+Jane is getting out of the penalty box
+Jane's new location is 0
+The category is Pop
+Pop Question 10
+Answer was correct!!!!
+Jane now has 5 Gold Coins.
+Fred is the current player
+They have rolled a 3
+Fred is getting out of the penalty box
+Fred's new location is 5
+The category is Science
+Science Question 14
+Question was incorrectly answered
+Fred was sent to the penalty box
+Bob is the current player
+They have rolled a 0
+Bob is not getting out of the penalty box
+Question was incorrectly answered
+Bob was sent to the penalty box
+Jane is the current player
+They have rolled a 2
+Jane is not getting out of the penalty box
+Question was incorrectly answered
+Jane was sent to the penalty box
+Fred is the current player
+They have rolled a 4
+Fred is not getting out of the penalty box
+Bob is the current player
+They have rolled a 6
+Bob is not getting out of the penalty box
+Jane is the current player
+They have rolled a 1
+Jane is getting out of the penalty box
+Jane's new location is 1
+The category is Science
+Science Question 15
+Question was incorrectly answered
+Jane was sent to the penalty box
+Fred is the current player
+They have rolled a 3
+Fred is getting out of the penalty box
+Fred's new location is 8
+The category is Pop
+Pop Question 11
+Question was incorrectly answered
+Fred was sent to the penalty box
+Bob is the current player
+They have rolled a 5
+Bob is getting out of the penalty box
+Bob's new location is 2
+The category is Sports
+Sports Question 13
+Answer was correct!!!!
+Bob now has 4 Gold Coins.
+Jane is the current player
+They have rolled a 3
+Jane is getting out of the penalty box
+Jane's new location is 4
+The category is Pop
+Pop Question 12
+Question was incorrectly answered
+Jane was sent to the penalty box
+Fred is the current player
+They have rolled a 0
+Fred is not getting out of the penalty box
+Question was incorrectly answered
+Fred was sent to the penalty box
+Bob is the current player
+They have rolled a 2
+Bob is not getting out of the penalty box
+Question was incorrectly answered
+Bob was sent to the penalty box
+Jane is the current player
+They have rolled a 4
+Jane is not getting out of the penalty box
+Fred is the current player
+They have rolled a 6
+Fred is not getting out of the penalty box
+Bob is the current player
+They have rolled a 1
+Bob is getting out of the penalty box
+Bob's new location is 3
+The category is Rock
+Rock Question 9
+Question was incorrectly answered
+Bob was sent to the penalty box
+Jane is the current player
+They have rolled a 3
+Jane is getting out of the penalty box
+Jane's new location is 7
+The category is Rock
+Rock Question 10
+Question was incorrectly answered
+Jane was sent to the penalty box
+Fred is the current player
+They have rolled a 5
+Fred is getting out of the penalty box
+Fred's new location is 1
+The category is Science
+Science Question 16
+Answer was correct!!!!
+Fred now has 6 Gold Coins.
