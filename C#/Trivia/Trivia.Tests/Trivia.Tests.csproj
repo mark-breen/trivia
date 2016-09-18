@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="CharacterisationTests.cs" />
     <Compile Include="IsPlayableTests.cs" />
+    <Compile Include="PlayerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestableGame.cs" />
   </ItemGroup>
