@@ -44,8 +44,6 @@ namespace Trivia
 
         public bool Add(string playerName)
         {
-
-
             _players.Add(playerName);
             _places[HowManyPlayers()] = 0;
             _purses[HowManyPlayers()] = 0;
