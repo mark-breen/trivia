@@ -16,14 +16,14 @@ They have rolled a 4
 Jane's new location is 4
 The category is Pop
 Pop Question 0
-Answer was corrent!!!!
+Answer was correct!!!!
 Jane now has 1 Gold Coins.
 Fred is the current player
 They have rolled a 6
 Fred's new location is 6
 The category is Sports
 Sports Question 1
-Answer was corrent!!!!
+Answer was correct!!!!
 Fred now has 1 Gold Coins.
 Bob is the current player
 They have rolled a 1
@@ -45,7 +45,7 @@ They have rolled a 5
 Fred's new location is 11
 The category is Rock
 Rock Question 2
-Answer was corrent!!!!
+Answer was correct!!!!
 Fred now has 2 Gold Coins.
 Bob is the current player
 They have rolled a 3

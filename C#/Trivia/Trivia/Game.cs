@@ -109,14 +109,13 @@ namespace Trivia
                 }
                 else
                 {
-
                     NextPlayer();
                     return true;
                 }
             }
             else
             {
-                OutputMessage("Answer was corrent!!!!");
+                OutputMessage("Answer was correct!!!!");
                 _purses[_currentPlayer]++;
                 OutputMessage(_players[_currentPlayer]
                         + " now has "
