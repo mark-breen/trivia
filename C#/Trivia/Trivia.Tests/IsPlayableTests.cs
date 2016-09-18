@@ -1,7 +1,6 @@
-﻿using System.Security.Policy;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using TestStack.BDDfy;
-using UglyTrivia;
+// ReSharper disable InconsistentNaming
 
 namespace Trivia.Tests
 {
@@ -27,13 +26,13 @@ namespace Trivia.Tests
             [Then]
             public void ThenTheCorrectNumberOfPlayersAreRecorded()
             {
-                Assert.That(_sut.howManyPlayers(), Is.EqualTo(0));
+                Assert.That(_sut.HowManyPlayers(), Is.EqualTo(0));
             }
 
             [AndThen]
             public void ThenTheGameIsInTheCorrectPlayableState()
             {
-                Assert.That(_sut.isPlayable, Is.False);
+                Assert.That(_sut.IsPlayable, Is.False);
             }
 
             [Test]
@@ -57,19 +56,19 @@ namespace Trivia.Tests
             [When]
             public void WhenThePlayersAreAdded()
             {
-                _sut.add("one player");
+                _sut.Add("one player");
             }
 
             [Then]
             public void ThenTheCorrectNumberOfPlayersAreRecorded()
             {
-                Assert.That(_sut.howManyPlayers(), Is.EqualTo(1));
+                Assert.That(_sut.HowManyPlayers(), Is.EqualTo(1));
             }
 
             [AndThen]
             public void ThenTheGameIsInTheCorrectPlayableState()
             {
-                Assert.That(_sut.isPlayable, Is.False);
+                Assert.That(_sut.IsPlayable, Is.False);
             }
 
             [Test]
@@ -93,20 +92,20 @@ namespace Trivia.Tests
             [When]
             public void WhenThePlayersAreAdded()
             {
-                _sut.add("one player");
-                _sut.add("two players");
+                _sut.Add("one player");
+                _sut.Add("two players");
             }
 
             [Then]
             public void ThenTheCorrectNumberOfPlayersAreRecorded()
             {
-                Assert.That(_sut.howManyPlayers(), Is.EqualTo(2));
+                Assert.That(_sut.HowManyPlayers(), Is.EqualTo(2));
             }
 
             [AndThen]
             public void ThenTheGameIsInTheCorrectPlayableState()
             {
-                Assert.That(_sut.isPlayable, Is.True);
+                Assert.That(_sut.IsPlayable, Is.True);
             }
 
             [Test]
@@ -130,21 +129,21 @@ namespace Trivia.Tests
             [When]
             public void WhenThePlayersAreAdded()
             {
-                _sut.add("one player");
-                _sut.add("two players");
-                _sut.add("three players");
+                _sut.Add("one player");
+                _sut.Add("two players");
+                _sut.Add("three players");
             }
 
             [Then]
             public void ThenTheCorrectNumberOfPlayersAreRecorded()
             {
-                Assert.That(_sut.howManyPlayers(), Is.EqualTo(3));
+                Assert.That(_sut.HowManyPlayers(), Is.EqualTo(3));
             }
 
             [AndThen]
             public void ThenTheGameIsInTheCorrectPlayableState()
             {
-                Assert.That(_sut.isPlayable, Is.True);
+                Assert.That(_sut.IsPlayable, Is.True);
             }
 
             [Test]
@@ -172,20 +171,20 @@ namespace Trivia.Tests
             {
                 for (int i = 1; i <= _noOfPlayers; i++)
                 {
-                    _sut.add(i.ToString());
+                    _sut.Add(i.ToString());
                 }
             }
 
             [Then]
             public void ThenTheCorrectNumberOfPlayersAreRecorded()
             {
-                Assert.That(_sut.howManyPlayers(), Is.EqualTo(_noOfPlayers));
+                Assert.That(_sut.HowManyPlayers(), Is.EqualTo(_noOfPlayers));
             }
 
             [AndThen]
             public void ThenTheGameIsInTheCorrectPlayableState()
             {
-                Assert.That(_sut.isPlayable, Is.True);
+                Assert.That(_sut.IsPlayable, Is.True);
             }
 
             [Test]
@@ -213,20 +212,20 @@ namespace Trivia.Tests
             {
                 for (int i = 1; i <= _noOfPlayers; i++)
                 {
-                    _sut.add(i.ToString());
+                    _sut.Add(i.ToString());
                 }
             }
 
             [Then]
             public void ThenTheCorrectNumberOfPlayersAreRecorded()
             {
-                Assert.That(_sut.howManyPlayers(), Is.EqualTo(_noOfPlayers));
+                Assert.That(_sut.HowManyPlayers(), Is.EqualTo(_noOfPlayers));
             }
 
             [AndThen]
             public void ThenTheGameIsInTheCorrectPlayableState()
             {
-                Assert.That(_sut.isPlayable, Is.True);
+                Assert.That(_sut.IsPlayable, Is.True);
             }
 
             [Test]

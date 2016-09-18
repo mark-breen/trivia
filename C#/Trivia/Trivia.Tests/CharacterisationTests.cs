@@ -2,6 +2,7 @@
 using ApprovalTests;
 using ApprovalTests.Reporters;
 using NUnit.Framework;
+// ReSharper disable InconsistentNaming
 
 namespace Trivia.Tests
 {
@@ -17,7 +18,7 @@ namespace Trivia.Tests
             public void SetUp()
             {
                 _sut = new TestableGame();
-                _sut.add("Bob");
+                _sut.Add("Bob");
             }
 
             [Test]
@@ -37,8 +38,8 @@ namespace Trivia.Tests
             public void SetUp()
             {
                 _sut = new TestableGame();
-                _sut.add("Bob");
-                _sut.add("Jane");
+                _sut.Add("Bob");
+                _sut.Add("Jane");
             }
 
             [Test]
@@ -58,9 +59,9 @@ namespace Trivia.Tests
             public void SetUp()
             {
                 _sut = new TestableGame();
-                _sut.add("Bob");
-                _sut.add("Jane");
-                _sut.add("Fred");
+                _sut.Add("Bob");
+                _sut.Add("Jane");
+                _sut.Add("Fred");
             }
 
             [Test]
@@ -91,17 +92,17 @@ namespace Trivia.Tests
             public void SetUp()
             {
                 _sut = new TestableGame();
-                _sut.add("Bob");
-                _sut.add("Jane");
-                _sut.add("Fred");
+                _sut.Add("Bob");
+                _sut.Add("Jane");
+                _sut.Add("Fred");
 
                 var diceRolls = _diceRolls.GetEnumerator();
                 diceRolls.MoveNext();
                 var notAWinner = true;
                 while (notAWinner)
                 {
-                    _sut.roll(diceRolls.Current);
-                    notAWinner = _sut.wasCorrectlyAnswered();
+                    _sut.Roll(diceRolls.Current);
+                    notAWinner = _sut.WasCorrectlyAnswered();
                     if (!diceRolls.MoveNext())
                     {
                         diceRolls = _diceRolls.GetEnumerator();
@@ -137,9 +138,9 @@ namespace Trivia.Tests
             public void SetUp()
             {
                 _sut = new TestableGame();
-                _sut.add("Bob");
-                _sut.add("Jane");
-                _sut.add("Fred");
+                _sut.Add("Bob");
+                _sut.Add("Jane");
+                _sut.Add("Fred");
 
                 var diceRolls = _diceRolls.GetEnumerator();
                 diceRolls.MoveNext();
@@ -147,14 +148,14 @@ namespace Trivia.Tests
                 while (notAWinner)
                 {
                     var roll = diceRolls.Current;
-                    _sut.roll(roll);
+                    _sut.Roll(roll);
                     if(roll >= 4)
                     {
-                        notAWinner = _sut.wasCorrectlyAnswered();
+                        notAWinner = _sut.WasCorrectlyAnswered();
                     }
                     else
                     {
-                        notAWinner = _sut.wrongAnswer();
+                        notAWinner = _sut.WrongAnswer();
                     }
                     if (!diceRolls.MoveNext())
                     {
@@ -191,9 +192,9 @@ namespace Trivia.Tests
             public void SetUp()
             {
                 _sut = new TestableGame();
-                _sut.add("Bob");
-                _sut.add("Jane");
-                _sut.add("Fred");
+                _sut.Add("Bob");
+                _sut.Add("Jane");
+                _sut.Add("Fred");
 
                 var diceRolls = _diceRolls.GetEnumerator();
                 diceRolls.MoveNext();
@@ -201,14 +202,14 @@ namespace Trivia.Tests
                 while (notAWinner)
                 {
                     var roll = diceRolls.Current;
-                    _sut.roll(roll);
+                    _sut.Roll(roll);
                     if (roll <= 3)
                     {
-                        notAWinner = _sut.wasCorrectlyAnswered();
+                        notAWinner = _sut.WasCorrectlyAnswered();
                     }
                     else
                     {
-                        notAWinner = _sut.wrongAnswer();
+                        notAWinner = _sut.WrongAnswer();
                     }
                     if (!diceRolls.MoveNext())
                     {

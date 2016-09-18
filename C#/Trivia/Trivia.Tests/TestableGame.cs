@@ -1,13 +1,10 @@
-﻿using System.Collections.Generic;
-using System.Text;
-using NUnit.Framework;
-using UglyTrivia;
+﻿using System.Text;
 
 namespace Trivia.Tests
 {
     public class TestableGame : Game
     {
-        private StringBuilder _messages = new StringBuilder();
+        private readonly StringBuilder _messages = new StringBuilder();
 
         protected override void OutputMessage(string message)
         {
