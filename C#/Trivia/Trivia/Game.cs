@@ -66,74 +66,29 @@ namespace Trivia
             OutputMessage(_players[_currentPlayer] + " is the current player");
             OutputMessage("They have rolled a " + roll);
 
-            if (_inPenaltyBox[_currentPlayer])
-            {
-                _isGettingOutOfPenaltyBox = roll%2 != 0;
-                if (_isGettingOutOfPenaltyBox)
-                {
-                    OutputMessage(_players[_currentPlayer] + " is getting out of the penalty box");
-                    MovePlayerAndAskQuestion(roll);
-                }
-                else
-                {
-                    OutputMessage(_players[_currentPlayer] + " is not getting out of the penalty box");
-                }
+            _isGettingOutOfPenaltyBox = roll % 2 != 0;
 
-            }
-            else
+            if (_inPenaltyBox[_currentPlayer] && !_isGettingOutOfPenaltyBox)
             {
-                MovePlayerAndAskQuestion(roll);
+                OutputMessage(_players[_currentPlayer] + " is not getting out of the penalty box");
+                return;
             }
 
+            if (_inPenaltyBox[_currentPlayer] && _isGettingOutOfPenaltyBox)
+            {
+                OutputMessage(_players[_currentPlayer] + " is getting out of the penalty box");
+            }
+            MovePlayerAndAskQuestion(roll);
         }
 
 
         public bool WasCorrectlyAnswered()
         {
-            if (_inPenaltyBox[_currentPlayer])
+            if (!_inPenaltyBox[_currentPlayer] || _isGettingOutOfPenaltyBox)
             {
-                if (_isGettingOutOfPenaltyBox)
-                {
-                    OutputMessage("Answer was correct!!!!");
-                    _purses[_currentPlayer]++;
-                    OutputMessage(_players[_currentPlayer]
-                            + " now has "
-                            + _purses[_currentPlayer]
-                            + " Gold Coins.");
-
-                    bool winner = DidPlayerWin();
-
-                    NextPlayer();
-
-                    return winner;
-                }
-                else
-                {
-                    NextPlayer();
-                    return true;
-                }
+                ProcessCorrectAnswer();
             }
-            else
-            {
-                OutputMessage("Answer was correct!!!!");
-                _purses[_currentPlayer]++;
-                OutputMessage(_players[_currentPlayer]
-                        + " now has "
-                        + _purses[_currentPlayer]
-                        + " Gold Coins.");
-
-                bool winner = DidPlayerWin();
-
-                NextPlayer();
-
-                return winner;
-            }
-        }
-
-        private void NextPlayer()
-        {
-            _currentPlayer++;
-            if (_currentPlayer == _players.Count) _currentPlayer = 0;
+            return ProcessSwitchingPlayers();
         }
 
         public bool WrongAnswer()
@@ -142,8 +97,26 @@ namespace Trivia
             OutputMessage(_players[_currentPlayer] + " was sent to the penalty box");
             _inPenaltyBox[_currentPlayer] = true;
 
+            return ProcessSwitchingPlayers();
+        }
+
+        private void ProcessCorrectAnswer()
+        {
+            OutputMessage("Answer was correct!!!!");
+            _purses[_currentPlayer]++;
+            OutputMessage(_players[_currentPlayer]
+                          + " now has "
+                          + _purses[_currentPlayer]
+                          + " Gold Coins.");
+        }
+
+        private bool ProcessSwitchingPlayers()
+        {
+            var isGameOngoing = IsGameOngoing();
+
             NextPlayer();
-            return true;
+
+            return isGameOngoing;
         }
 
         private string CurrentCategory()
@@ -160,6 +133,12 @@ namespace Trivia
             return "Rock";
         }
 
+        private void NextPlayer()
+        {
+            _currentPlayer++;
+            if (_currentPlayer == _players.Count) _currentPlayer = 0;
+        }
+
         private void MovePlayerAndAskQuestion(int roll)
         {
             _places[_currentPlayer] = _places[_currentPlayer] + roll;
@@ -173,7 +152,7 @@ namespace Trivia
         }
 
 
-        private bool DidPlayerWin()
+        private bool IsGameOngoing()
         {
             return _purses[_currentPlayer] != 6;
         }
