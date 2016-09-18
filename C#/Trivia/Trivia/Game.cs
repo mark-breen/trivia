@@ -102,24 +102,20 @@ namespace Trivia
                             + " Gold Coins.");
 
                     bool winner = DidPlayerWin();
-                    _currentPlayer++;
-                    if (_currentPlayer == _players.Count) _currentPlayer = 0;
+
+                    NextPlayer();
 
                     return winner;
                 }
                 else
                 {
-                    _currentPlayer++;
-                    if (_currentPlayer == _players.Count) _currentPlayer = 0;
+
+                    NextPlayer();
                     return true;
                 }
-
-
-
             }
             else
             {
-
                 OutputMessage("Answer was corrent!!!!");
                 _purses[_currentPlayer]++;
                 OutputMessage(_players[_currentPlayer]
@@ -128,11 +124,17 @@ namespace Trivia
                         + " Gold Coins.");
 
                 bool winner = DidPlayerWin();
-                _currentPlayer++;
-                if (_currentPlayer == _players.Count) _currentPlayer = 0;
+
+                NextPlayer();
 
                 return winner;
             }
+        }
+
+        private void NextPlayer()
+        {
+            _currentPlayer++;
+            if (_currentPlayer == _players.Count) _currentPlayer = 0;
         }
 
         public bool WrongAnswer()
@@ -141,8 +143,7 @@ namespace Trivia
             OutputMessage(_players[_currentPlayer] + " was sent to the penalty box");
             _inPenaltyBox[_currentPlayer] = true;
 
-            _currentPlayer++;
-            if (_currentPlayer == _players.Count) _currentPlayer = 0;
+            NextPlayer();
             return true;
         }
 
