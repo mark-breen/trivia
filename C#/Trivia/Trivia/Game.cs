@@ -47,13 +47,12 @@ namespace Trivia
         {
             _newPlayers.Add(playerName);
 
-            _players.Add(playerName);
             _places[HowManyPlayers()] = 0;
             _purses[HowManyPlayers()] = 0;
             _inPenaltyBox[HowManyPlayers()] = false;
 
             OutputMessage(playerName + " was added");
-            OutputMessage("They are player number " + _players.Count);
+            OutputMessage("They are player number " + HowManyPlayers());
             return true;
         }
 
@@ -64,20 +63,20 @@ namespace Trivia
 
         public void Roll(int roll)
         {
-            OutputMessage(_players[_currentPlayer] + " is the current player");
+            OutputMessage(_newPlayers.CurrentPlayer().Name + " is the current player");
             OutputMessage("They have rolled a " + roll);
 
             _isGettingOutOfPenaltyBox = roll % 2 != 0;
 
             if (_inPenaltyBox[_currentPlayer] && !_isGettingOutOfPenaltyBox)
             {
-                OutputMessage(_players[_currentPlayer] + " is not getting out of the penalty box");
+                OutputMessage(_newPlayers.CurrentPlayer().Name + " is not getting out of the penalty box");
                 return;
             }
 
             if (_inPenaltyBox[_currentPlayer] && _isGettingOutOfPenaltyBox)
             {
-                OutputMessage(_players[_currentPlayer] + " is getting out of the penalty box");
+                OutputMessage(_newPlayers.CurrentPlayer().Name + " is getting out of the penalty box");
             }
             MovePlayerAndAskQuestion(roll);
         }
@@ -95,17 +94,29 @@ namespace Trivia
         public bool WrongAnswer()
         {
             OutputMessage("Question was incorrectly answered");
-            OutputMessage(_players[_currentPlayer] + " was sent to the penalty box");
+            OutputMessage(_newPlayers.CurrentPlayer().Name + " was sent to the penalty box");
             _inPenaltyBox[_currentPlayer] = true;
 
             return ProcessSwitchingPlayers();
+        }
+
+        private void MovePlayerAndAskQuestion(int roll)
+        {
+            _places[_currentPlayer] = _places[_currentPlayer] + roll;
+            if (_places[_currentPlayer] > 11) _places[_currentPlayer] = _places[_currentPlayer] - 12;
+
+            OutputMessage(_newPlayers.CurrentPlayer().Name
+                          + "'s new location is "
+                          + _places[_currentPlayer]);
+            OutputMessage("The category is " + CurrentCategory());
+            AskQuestion();
         }
 
         private void ProcessCorrectAnswer()
         {
             OutputMessage("Answer was correct!!!!");
             _purses[_currentPlayer]++;
-            OutputMessage(_players[_currentPlayer]
+            OutputMessage(_newPlayers.CurrentPlayer().Name
                           + " now has "
                           + _purses[_currentPlayer]
                           + " Gold Coins.");
@@ -136,20 +147,9 @@ namespace Trivia
 
         private void NextPlayer()
         {
+            _newPlayers.NextPlayer();
             _currentPlayer++;
-            if (_currentPlayer == _players.Count) _currentPlayer = 0;
-        }
-
-        private void MovePlayerAndAskQuestion(int roll)
-        {
-            _places[_currentPlayer] = _places[_currentPlayer] + roll;
-            if (_places[_currentPlayer] > 11) _places[_currentPlayer] = _places[_currentPlayer] - 12;
-
-            OutputMessage(_players[_currentPlayer]
-                          + "'s new location is "
-                          + _places[_currentPlayer]);
-            OutputMessage("The category is " + CurrentCategory());
-            AskQuestion();
+            if (_currentPlayer == _newPlayers.Count) _currentPlayer = 0;
         }
 
 
