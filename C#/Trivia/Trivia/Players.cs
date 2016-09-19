@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Trivia
 {
@@ -27,7 +26,7 @@ namespace Trivia
             {
                 InitialiseEnumerator();
             }
-            return _playersEnumerator.Current;
+            return _playersEnumerator?.Current;
         }
 
         public void NextPlayer()

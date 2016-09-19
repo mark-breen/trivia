@@ -6,7 +6,6 @@ namespace Trivia
 {
     public class Game
     {
-        private readonly List<string> _players = new List<string>();
         private readonly Players _newPlayers = new Players();
 
         private readonly int[] _places = new int[6];
