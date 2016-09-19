@@ -7,6 +7,7 @@ namespace Trivia
     public class Game
     {
         private readonly List<string> _players = new List<string>();
+        private readonly Players _newPlayers = new Players();
 
         private readonly int[] _places = new int[6];
         private readonly int[] _purses = new int[6];
@@ -39,11 +40,13 @@ namespace Trivia
 
         public bool IsPlayable()
         {
-            return (HowManyPlayers() >= 2);
+            return _newPlayers.MinimumPlayerCountReached();
         }
 
         public bool Add(string playerName)
         {
+            _newPlayers.Add(playerName);
+
             _players.Add(playerName);
             _places[HowManyPlayers()] = 0;
             _purses[HowManyPlayers()] = 0;
@@ -56,7 +59,7 @@ namespace Trivia
 
         public int HowManyPlayers()
         {
-            return _players.Count;
+            return _newPlayers.Count;
         }
 
         public void Roll(int roll)
