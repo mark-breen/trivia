@@ -9,7 +9,6 @@ namespace Trivia
         private readonly Players _newPlayers = new Players();
 
         private readonly int[] _places = new int[6];
-        private readonly int[] _purses = new int[6];
 
         private readonly bool[] _inPenaltyBox = new bool[6];
 
@@ -47,7 +46,7 @@ namespace Trivia
             _newPlayers.Add(playerName);
 
             _places[HowManyPlayers()] = 0;
-            _purses[HowManyPlayers()] = 0;
+
             _inPenaltyBox[HowManyPlayers()] = false;
 
             OutputMessage(playerName + " was added");
@@ -94,6 +93,9 @@ namespace Trivia
         {
             OutputMessage("Question was incorrectly answered");
             OutputMessage(_newPlayers.CurrentPlayer().Name + " was sent to the penalty box");
+
+            _newPlayers.CurrentPlayer().GoToPenaltyBox();
+
             _inPenaltyBox[_currentPlayer] = true;
 
             return ProcessSwitchingPlayers();
@@ -114,10 +116,10 @@ namespace Trivia
         private void ProcessCorrectAnswer()
         {
             OutputMessage("Answer was correct!!!!");
-            _purses[_currentPlayer]++;
+            _newPlayers.CurrentPlayer().WinsGoldCoin();
             OutputMessage(_newPlayers.CurrentPlayer().Name
                           + " now has "
-                          + _purses[_currentPlayer]
+                          + _newPlayers.CurrentPlayer().Purse
                           + " Gold Coins.");
         }
 
@@ -154,7 +156,7 @@ namespace Trivia
 
         private bool IsGameOngoing()
         {
-            return _purses[_currentPlayer] != 6;
+            return !_newPlayers.CurrentPlayer().HasWon();
         }
 
         private void AskQuestion()
