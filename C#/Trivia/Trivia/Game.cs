@@ -8,10 +8,18 @@ namespace Trivia
     {
         private readonly Players _newPlayers = new Players();
 
+        // A player must answer the question represented by the category of the place.
+        // Incorrect answers move players to the penalty box
         private readonly int[] _places = new int[6];
 
+        // When a player is in the penalty box, they must roll
+        // an odd number to continue from their current place
+        // i.e the place where the player answered incorrectly
+        // Whilst in the penalty box, the player does not progress
+        // so should probably not answer questions!
         private readonly bool[] _inPenaltyBox = new bool[6];
 
+        // Needs to be an encapsulated collection of questions
         private readonly LinkedList<string> _popQuestions = new LinkedList<string>();
         private readonly LinkedList<string> _scienceQuestions = new LinkedList<string>();
         private readonly LinkedList<string> _sportsQuestions = new LinkedList<string>();

@@ -1,0 +1,51 @@
+﻿Bob was added
+They are player number 1
+Jane was added
+They are player number 2
+Bob is the current player
+They have rolled a 1
+Bob's new location is 1
+The category is Science
+Science Question 0
+Question was incorrectly answered
+Bob was sent to the penalty box
+Jane is the current player
+They have rolled a 2
+Jane's new location is 2
+The category is Sports
+Sports Question 0
+Answer was correct!!!!
+Jane now has 1 Gold Coins.
+Bob is the current player
+They have rolled a 2
+Bob is not getting out of the penalty box
+Jane is the current player
+They have rolled a 2
+Jane's new location is 4
+The category is Pop
+Pop Question 0
+Answer was correct!!!!
+Jane now has 2 Gold Coins.
+Bob is the current player
+They have rolled a 1
+Bob is getting out of the penalty box
+Bob's new location is 2
+The category is Sports
+Sports Question 1
+Answer was correct!!!!
+Bob now has 1 Gold Coins.
+Jane is the current player
+They have rolled a 1
+Jane's new location is 5
+The category is Science
+Science Question 1
+Answer was correct!!!!
+Jane now has 3 Gold Coins.
+Bob is the current player
+They have rolled a 1
+Bob is getting out of the penalty box
+Bob's new location is 3
+The category is Rock
+Rock Question 0
+Answer was correct!!!!
+Bob now has 2 Gold Coins.

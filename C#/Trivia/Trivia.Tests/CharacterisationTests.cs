@@ -72,6 +72,55 @@ namespace Trivia.Tests
         }
 
         [TestFixture]
+        [UseReporter(typeof(DiffReporter))]
+        public class GoldenMaster_NewGame_TwoPlayers
+        {
+            private TestableGame _sut;
+
+            [SetUp]
+            public void SetUp()
+            {
+                _sut = new TestableGame();
+                _sut.Add("Bob");
+                _sut.Add("Jane");
+
+                // bob
+                _sut.Roll(1);
+                _sut.WrongAnswer();
+
+                // jane
+                _sut.Roll(2);
+                _sut.WasCorrectlyAnswered();
+
+                // bob
+                _sut.Roll(2);
+                _sut.WasCorrectlyAnswered();
+
+                // jane
+                _sut.Roll(2);
+                _sut.WasCorrectlyAnswered();
+
+                // bob
+                _sut.Roll(1);
+                _sut.WasCorrectlyAnswered();
+
+                // jane
+                _sut.Roll(1);
+                _sut.WasCorrectlyAnswered();
+
+                // bob
+                _sut.Roll(1);
+                _sut.WasCorrectlyAnswered();
+            }
+
+            [Test]
+            public void GetSnapshot()
+            {
+                Approvals.Verify(_sut.GetMessages());
+            }
+        }
+
+        [TestFixture]
         [UseReporter(typeof (DiffReporter))]
         public class GoldenMaster_ThreePlayers_AllCorrectAnswers
         {
