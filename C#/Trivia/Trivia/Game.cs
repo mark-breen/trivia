@@ -6,9 +6,9 @@ namespace Trivia
 {
     public class Game
     {
-        private readonly Players _newPlayers = new Players();
+        private readonly Players _players = new Players();
 
-        private readonly Places _newPlaces = new Places();
+        private readonly Places _places = new Places();
 
         // A player must answer the question represented by the category of the place.
         // Incorrect answers move players to the penalty box
@@ -47,12 +47,12 @@ namespace Trivia
 
         public bool IsPlayable()
         {
-            return _newPlayers.MinimumPlayerCountReached();
+            return _players.MinimumPlayerCountReached();
         }
 
         public bool Add(string playerName)
         {
-            _newPlayers.Add(playerName, _newPlaces.StartingPlace());
+            _players.Add(playerName, _places.StartingPlace());
 
             _inPenaltyBox[HowManyPlayers()] = false;
 
@@ -63,25 +63,25 @@ namespace Trivia
 
         public int HowManyPlayers()
         {
-            return _newPlayers.Count;
+            return _players.Count;
         }
 
         public void Roll(int roll)
         {
-            OutputMessage(_newPlayers.CurrentPlayer().Name + " is the current player");
+            OutputMessage(_players.CurrentPlayer().Name + " is the current player");
             OutputMessage("They have rolled a " + roll);
 
             _isGettingOutOfPenaltyBox = roll % 2 != 0;
 
             if (_inPenaltyBox[_currentPlayer] && !_isGettingOutOfPenaltyBox)
             {
-                OutputMessage(_newPlayers.CurrentPlayer().Name + " is not getting out of the penalty box");
+                OutputMessage(_players.CurrentPlayer().Name + " is not getting out of the penalty box");
                 return;
             }
 
             if (_inPenaltyBox[_currentPlayer] && _isGettingOutOfPenaltyBox)
             {
-                OutputMessage(_newPlayers.CurrentPlayer().Name + " is getting out of the penalty box");
+                OutputMessage(_players.CurrentPlayer().Name + " is getting out of the penalty box");
             }
             MovePlayerAndAskQuestion(roll);
         }
@@ -99,9 +99,9 @@ namespace Trivia
         public bool WrongAnswer()
         {
             OutputMessage("Question was incorrectly answered");
-            OutputMessage(_newPlayers.CurrentPlayer().Name + " was sent to the penalty box");
+            OutputMessage(_players.CurrentPlayer().Name + " was sent to the penalty box");
 
-            _newPlayers.CurrentPlayer().GoToPenaltyBox();
+            _players.CurrentPlayer().GoToPenaltyBox();
 
             _inPenaltyBox[_currentPlayer] = true;
 
@@ -110,8 +110,8 @@ namespace Trivia
 
         private void MovePlayerAndAskQuestion(int roll)
         {
-            var currentPlayer = _newPlayers.CurrentPlayer();
-            currentPlayer.CurrentPlace = _newPlaces.NextPlaceFor(
+            var currentPlayer = _players.CurrentPlayer();
+            currentPlayer.CurrentPlace = _places.NextPlaceFor(
                 currentPlayer.CurrentPlace, roll);
 
             OutputMessage(currentPlayer.Name
@@ -124,10 +124,10 @@ namespace Trivia
         private void ProcessCorrectAnswer()
         {
             OutputMessage("Answer was correct!!!!");
-            _newPlayers.CurrentPlayer().WinsGoldCoin();
-            OutputMessage(_newPlayers.CurrentPlayer().Name
+            _players.CurrentPlayer().WinsGoldCoin();
+            OutputMessage(_players.CurrentPlayer().Name
                           + " now has "
-                          + _newPlayers.CurrentPlayer().Purse
+                          + _players.CurrentPlayer().Purse
                           + " Gold Coins.");
         }
 
@@ -142,20 +142,20 @@ namespace Trivia
 
         private string CurrentCategory()
         {
-            return _newPlayers.CurrentPlayer().CurrentPlace.Category;
+            return _players.CurrentPlayer().CurrentPlace.Category;
         }
 
         private void NextPlayer()
         {
-            _newPlayers.NextPlayer();
+            _players.NextPlayer();
             _currentPlayer++;
-            if (_currentPlayer == _newPlayers.Count) _currentPlayer = 0;
+            if (_currentPlayer == _players.Count) _currentPlayer = 0;
         }
 
 
         private bool IsGameOngoing()
         {
-            return !_newPlayers.CurrentPlayer().HasWon();
+            return !_players.CurrentPlayer().HasWon();
         }
 
         private void AskQuestion()
