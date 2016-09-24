@@ -10,9 +10,9 @@ namespace Trivia
 
         public int Count => _players.Count;
 
-        public void Add(string playerName)
+        public void Add(string playerName, Place startingPlace)
         {
-            _players.Add(new Player(playerName));
+            _players.Add(new Player(playerName, startingPlace));
         }
 
         public bool MinimumPlayerCountReached()

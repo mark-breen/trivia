@@ -12,26 +12,26 @@ namespace Trivia.Tests
             [Test]
             public void NullName()
             {
-                Assert.Throws<ArgumentException>(() => new Player(null));
+                Assert.Throws<ArgumentException>(() => new Player(null, null));
             }
 
             [Test]
             public void EmptyName()
             {
-                Assert.Throws<ArgumentException>(() => new Player(string.Empty));
+                Assert.Throws<ArgumentException>(() => new Player(string.Empty, null));
             }
 
             [Test]
             public void WhitespaceName()
             {
-                Assert.Throws<ArgumentException>(() => new Player(" "));
+                Assert.Throws<ArgumentException>(() => new Player(" ", null));
             }
 
             [Test]
             public void ValidName()
             {
                 const string validName = "Some valid name";
-                var sut = new Player(validName);
+                var sut = new Player(validName, new Place(1, Guid.Empty, "bob"));
                 Assert.That(sut.Name, Is.EqualTo(validName));
             }
         }
@@ -45,7 +45,7 @@ namespace Trivia.Tests
             [Given]
             public void Given()
             {
-                _sut = new Player("Some player");
+                _sut = new Player("Some player", new Place(1, Guid.Empty, "bob"));
             }
 
             [When]
@@ -85,7 +85,7 @@ namespace Trivia.Tests
             [Given]
             public void Given()
             {
-                _sut = new Player("Some player");
+                _sut = new Player("Some player", new Place(1, Guid.Empty, "bob"));
             }
 
             [When]
@@ -124,7 +124,7 @@ namespace Trivia.Tests
             [Given]
             public void Given()
             {
-                _sut = new Player("Some player");
+                _sut = new Player("Some player", new Place(1, Guid.Empty, "bob"));
             }
 
             [When]

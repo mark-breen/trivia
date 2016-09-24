@@ -12,7 +12,6 @@ namespace Trivia
 
         // A player must answer the question represented by the category of the place.
         // Incorrect answers move players to the penalty box
-        private readonly int[] _places = new int[6];
 
         // When a player is in the penalty box, they must roll
         // an odd number to continue from their current place
@@ -53,9 +52,7 @@ namespace Trivia
 
         public bool Add(string playerName)
         {
-            _newPlayers.Add(playerName);
-
-            _places[HowManyPlayers()] = 0;
+            _newPlayers.Add(playerName, _newPlaces.StartingPlace());
 
             _inPenaltyBox[HowManyPlayers()] = false;
 
@@ -113,13 +110,13 @@ namespace Trivia
 
         private void MovePlayerAndAskQuestion(int roll)
         {
-            // A game has 12 places
-            _places[_currentPlayer] = _places[_currentPlayer] + roll;
-            if (_places[_currentPlayer] > 11) _places[_currentPlayer] = _places[_currentPlayer] - 12;
+            var currentPlayer = _newPlayers.CurrentPlayer();
+            currentPlayer.CurrentPlace = _newPlaces.NextPlaceFor(
+                currentPlayer.CurrentPlace, roll);
 
-            OutputMessage(_newPlayers.CurrentPlayer().Name
+            OutputMessage(currentPlayer.Name
                           + "'s new location is "
-                          + _places[_currentPlayer]);
+                          + currentPlayer.CurrentPlace.Index);
             OutputMessage("The category is " + CurrentCategory());
             AskQuestion();
         }
@@ -145,20 +142,7 @@ namespace Trivia
 
         private string CurrentCategory()
         {
-            if (_places[_currentPlayer] == 0) return Categories.Pop;
-            if (_places[_currentPlayer] == 1) return Categories.Science;
-            if (_places[_currentPlayer] == 2) return Categories.Sports;
-            if (_places[_currentPlayer] == 3) return Categories.Rock;
-            if (_places[_currentPlayer] == 4) return Categories.Pop;
-            if (_places[_currentPlayer] == 5) return Categories.Science;
-            if (_places[_currentPlayer] == 6) return Categories.Sports;
-            if (_places[_currentPlayer] == 7) return Categories.Rock;
-            if (_places[_currentPlayer] == 8) return Categories.Pop;
-            if (_places[_currentPlayer] == 9) return Categories.Science;
-            if (_places[_currentPlayer] == 10) return Categories.Sports;
-            if (_places[_currentPlayer] == 11) return Categories.Rock;
-
-            throw new InvalidOperationException("Invalid category selection");
+            return _newPlayers.CurrentPlayer().CurrentPlace.Category;
         }
 
         private void NextPlayer()
