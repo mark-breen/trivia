@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
 namespace Trivia
@@ -7,9 +6,10 @@ namespace Trivia
     public class Game
     {
         private readonly IGameOutput _gameOutput;
-        private readonly Players _players = new Players();
 
-        private readonly Places _places = new Places();
+        private readonly Players _players;
+
+        private readonly Places _places;
 
         // A player must answer the question represented by the category of the place.
         // Incorrect answers move players to the penalty box
@@ -38,6 +38,8 @@ namespace Trivia
         public Game(IGameOutput gameOutput)
         {
             _gameOutput = gameOutput;
+            _players = new Players(_gameOutput);
+            _places = new Places(_gameOutput);
             for (var i = 0; i < 50; i++)
             {
                 _popQuestions.AddLast("Pop Question " + i);
@@ -63,8 +65,6 @@ namespace Trivia
 
             _inPenaltyBox[HowManyPlayers()] = false;
 
-            OutputMessage(playerName + " was added");
-            OutputMessage("They are player number " + HowManyPlayers());
             return true;
         }
 

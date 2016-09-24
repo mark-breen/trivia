@@ -6,6 +6,8 @@ namespace Trivia
 {
     public class Places
     {
+        private readonly IGameOutput _gameOutput;
+
         private readonly List<Place> _places = new List<Place>
         {
             new Place(0, Guid.NewGuid(), Categories.Pop),
@@ -21,6 +23,11 @@ namespace Trivia
             new Place(10, Guid.NewGuid(), Categories.Sports),
             new Place(11, Guid.NewGuid(), Categories.Rock)
         };
+
+        public Places(IGameOutput gameOutput)
+        {
+            _gameOutput = gameOutput;
+        }
 
         public Place StartingPlace()
         {
