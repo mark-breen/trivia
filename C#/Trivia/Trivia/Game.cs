@@ -6,6 +6,7 @@ namespace Trivia
 {
     public class Game
     {
+        private readonly IGameOutput _gameOutput;
         private readonly Players _players = new Players();
 
         private readonly Places _places = new Places();
@@ -30,7 +31,13 @@ namespace Trivia
         private bool _isGettingOutOfPenaltyBox;
 
         public Game()
+            : this(new ConsoleOutput())
         {
+        }
+
+        public Game(IGameOutput gameOutput)
+        {
+            _gameOutput = gameOutput;
             for (var i = 0; i < 50; i++)
             {
                 _popQuestions.AddLast("Pop Question " + i);
@@ -182,11 +189,9 @@ namespace Trivia
             }
         }
 
-        // Testing seam
         protected virtual void OutputMessage(string message)
         {
-            Console.WriteLine(message);
+            _gameOutput.OutputMessage(message);
         }
     }
-
 }

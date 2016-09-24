@@ -65,8 +65,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsoleOutput.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="GameRunner.cs" />
+    <Compile Include="IGameOutput.cs" />
     <Compile Include="Place.cs" />
     <Compile Include="Places.cs" />
     <Compile Include="Player.cs" />

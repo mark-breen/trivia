@@ -12,19 +12,19 @@ namespace Trivia.Tests
         [UseReporter(typeof (DiffReporter))]
         public class GoldenMaster_NewGame_AddOnePlayer
         {
-            private TestableGame _sut;
+            private TestOutput _gameOutput;
 
             [SetUp]
             public void SetUp()
             {
-                _sut = new TestableGame();
-                _sut.Add("Bob");
+                _gameOutput = new TestOutput();
+                new Game(_gameOutput).Add("Bob");
             }
 
             [Test]
             public void GetSnapshot()
             {
-                Approvals.Verify(_sut.GetMessages());
+                Approvals.Verify(_gameOutput.GetMessages());
             }
         }
 
@@ -32,20 +32,21 @@ namespace Trivia.Tests
         [UseReporter(typeof (DiffReporter))]
         public class GoldenMaster_NewGame_AddTwoPlayers
         {
-            private TestableGame _sut;
+            private TestOutput _testOuput;
 
             [SetUp]
             public void SetUp()
             {
-                _sut = new TestableGame();
-                _sut.Add("Bob");
-                _sut.Add("Jane");
+                _testOuput = new TestOutput();
+                var sut = new Game(_testOuput);
+                sut.Add("Bob");
+                sut.Add("Jane");
             }
 
             [Test]
             public void GetSnapshot()
             {
-                Approvals.Verify(_sut.GetMessages());
+                Approvals.Verify(_testOuput.GetMessages());
             }
         }
 
@@ -53,21 +54,22 @@ namespace Trivia.Tests
         [UseReporter(typeof (DiffReporter))]
         public class GoldenMaster_NewGame_AddThreePlayers
         {
-            private TestableGame _sut;
+            private TestOutput _testOutput;
 
             [SetUp]
             public void SetUp()
             {
-                _sut = new TestableGame();
-                _sut.Add("Bob");
-                _sut.Add("Jane");
-                _sut.Add("Fred");
+                _testOutput = new TestOutput();
+                var sut = new Game(_testOutput);
+                sut.Add("Bob");
+                sut.Add("Jane");
+                sut.Add("Fred");
             }
 
             [Test]
             public void GetSnapshot()
             {
-                Approvals.Verify(_sut.GetMessages());
+                Approvals.Verify(_testOutput.GetMessages());
             }
         }
 
@@ -75,48 +77,49 @@ namespace Trivia.Tests
         [UseReporter(typeof(DiffReporter))]
         public class GoldenMaster_NewGame_TwoPlayers
         {
-            private TestableGame _sut;
+            private TestOutput _testOutput;
 
             [SetUp]
             public void SetUp()
             {
-                _sut = new TestableGame();
-                _sut.Add("Bob");
-                _sut.Add("Jane");
+                _testOutput = new TestOutput();
+                var sut = new Game(_testOutput);
+                sut.Add("Bob");
+                sut.Add("Jane");
 
                 // bob
-                _sut.Roll(1);
-                _sut.WrongAnswer();
+                sut.Roll(1);
+                sut.WrongAnswer();
 
                 // jane
-                _sut.Roll(2);
-                _sut.WasCorrectlyAnswered();
+                sut.Roll(2);
+                sut.WasCorrectlyAnswered();
 
                 // bob
-                _sut.Roll(2);
-                _sut.WasCorrectlyAnswered();
+                sut.Roll(2);
+                sut.WasCorrectlyAnswered();
 
                 // jane
-                _sut.Roll(2);
-                _sut.WasCorrectlyAnswered();
+                sut.Roll(2);
+                sut.WasCorrectlyAnswered();
 
                 // bob
-                _sut.Roll(1);
-                _sut.WasCorrectlyAnswered();
+                sut.Roll(1);
+                sut.WasCorrectlyAnswered();
 
                 // jane
-                _sut.Roll(1);
-                _sut.WasCorrectlyAnswered();
+                sut.Roll(1);
+                sut.WasCorrectlyAnswered();
 
                 // bob
-                _sut.Roll(1);
-                _sut.WasCorrectlyAnswered();
+                sut.Roll(1);
+                sut.WasCorrectlyAnswered();
             }
 
             [Test]
             public void GetSnapshot()
             {
-                Approvals.Verify(_sut.GetMessages());
+                Approvals.Verify(_testOutput.GetMessages());
             }
         }
 
@@ -124,8 +127,6 @@ namespace Trivia.Tests
         [UseReporter(typeof (DiffReporter))]
         public class GoldenMaster_ThreePlayers_AllCorrectAnswers
         {
-            private TestableGame _sut;
-
             private List<int> _diceRolls = new List<int>
             {
                 2,
@@ -137,21 +138,24 @@ namespace Trivia.Tests
                 3
             };
 
+            private TestOutput _testOutput;
+
             [SetUp]
             public void SetUp()
             {
-                _sut = new TestableGame();
-                _sut.Add("Bob");
-                _sut.Add("Jane");
-                _sut.Add("Fred");
+                _testOutput = new TestOutput();
+                var sut = new Game(_testOutput);
+                sut.Add("Bob");
+                sut.Add("Jane");
+                sut.Add("Fred");
 
                 var diceRolls = _diceRolls.GetEnumerator();
                 diceRolls.MoveNext();
                 var notAWinner = true;
                 while (notAWinner)
                 {
-                    _sut.Roll(diceRolls.Current);
-                    notAWinner = _sut.WasCorrectlyAnswered();
+                    sut.Roll(diceRolls.Current);
+                    notAWinner = sut.WasCorrectlyAnswered();
                     if (!diceRolls.MoveNext())
                     {
                         diceRolls = _diceRolls.GetEnumerator();
@@ -162,7 +166,7 @@ namespace Trivia.Tests
             [Test]
             public void GetSnapshot()
             {
-                Approvals.Verify(_sut.GetMessages());
+                Approvals.Verify(_testOutput.GetMessages());
             }
         }
 
@@ -170,8 +174,6 @@ namespace Trivia.Tests
         [UseReporter(typeof(DiffReporter))]
         public class GoldenMaster_ThreePlayers_CorrectAnswersOn4AndGreater
         {
-            private TestableGame _sut;
-
             private List<int> _diceRolls = new List<int>
             {
                 2,
@@ -183,13 +185,16 @@ namespace Trivia.Tests
                 3
             };
 
+            private TestOutput _testOutput;
+
             [SetUp]
             public void SetUp()
             {
-                _sut = new TestableGame();
-                _sut.Add("Bob");
-                _sut.Add("Jane");
-                _sut.Add("Fred");
+                _testOutput = new TestOutput();
+                var sut = new Game(_testOutput);
+                sut.Add("Bob");
+                sut.Add("Jane");
+                sut.Add("Fred");
 
                 var diceRolls = _diceRolls.GetEnumerator();
                 diceRolls.MoveNext();
@@ -197,14 +202,14 @@ namespace Trivia.Tests
                 while (notAWinner)
                 {
                     var roll = diceRolls.Current;
-                    _sut.Roll(roll);
+                    sut.Roll(roll);
                     if(roll >= 4)
                     {
-                        notAWinner = _sut.WasCorrectlyAnswered();
+                        notAWinner = sut.WasCorrectlyAnswered();
                     }
                     else
                     {
-                        notAWinner = _sut.WrongAnswer();
+                        notAWinner = sut.WrongAnswer();
                     }
                     if (!diceRolls.MoveNext())
                     {
@@ -216,7 +221,7 @@ namespace Trivia.Tests
             [Test]
             public void GetSnapshot()
             {
-                Approvals.Verify(_sut.GetMessages());
+                Approvals.Verify(_testOutput.GetMessages());
             }
         }
 
@@ -224,8 +229,6 @@ namespace Trivia.Tests
         [UseReporter(typeof(DiffReporter))]
         public class GoldenMaster_ThreePlayers_CorrectAnswersOn3OrLess
         {
-            private TestableGame _sut;
-
             private List<int> _diceRolls = new List<int>
             {
                 2,
@@ -237,13 +240,16 @@ namespace Trivia.Tests
                 3
             };
 
+            private TestOutput _testOutput;
+
             [SetUp]
             public void SetUp()
             {
-                _sut = new TestableGame();
-                _sut.Add("Bob");
-                _sut.Add("Jane");
-                _sut.Add("Fred");
+                _testOutput = new TestOutput();
+                var sut = new Game(_testOutput);
+                sut.Add("Bob");
+                sut.Add("Jane");
+                sut.Add("Fred");
 
                 var diceRolls = _diceRolls.GetEnumerator();
                 diceRolls.MoveNext();
@@ -251,14 +257,14 @@ namespace Trivia.Tests
                 while (notAWinner)
                 {
                     var roll = diceRolls.Current;
-                    _sut.Roll(roll);
+                    sut.Roll(roll);
                     if (roll <= 3)
                     {
-                        notAWinner = _sut.WasCorrectlyAnswered();
+                        notAWinner = sut.WasCorrectlyAnswered();
                     }
                     else
                     {
-                        notAWinner = _sut.WrongAnswer();
+                        notAWinner = sut.WrongAnswer();
                     }
                     if (!diceRolls.MoveNext())
                     {
@@ -270,7 +276,7 @@ namespace Trivia.Tests
             [Test]
             public void GetSnapshot()
             {
-                Approvals.Verify(_sut.GetMessages());
+                Approvals.Verify(_testOutput.GetMessages());
             }
         }
     }

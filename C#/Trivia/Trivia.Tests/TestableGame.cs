@@ -2,11 +2,12 @@
 
 namespace Trivia.Tests
 {
-    public class TestableGame : Game
+
+    public class TestOutput : IGameOutput
     {
         private readonly StringBuilder _messages = new StringBuilder();
 
-        protected override void OutputMessage(string message)
+        public void OutputMessage(string message)
         {
             _messages.AppendLine(message);
         }
