@@ -1,16 +1,13 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-namespace Trivia
+﻿namespace Trivia
 {
     public class Game
     {
         private readonly IGameOutput _gameOutput;
 
         private readonly Players _players;
-
         private readonly Places _places;
-
+        private readonly Questions _questions;
+        
         // A player must answer the question represented by the category of the place.
         // Incorrect answers move players to the penalty box
 
@@ -20,12 +17,6 @@ namespace Trivia
         // Whilst in the penalty box, the player does not progress
         // so should probably not answer questions!
         private readonly bool[] _inPenaltyBox = new bool[6];
-
-        // Needs to be an encapsulated collection of questions
-        private readonly LinkedList<string> _popQuestions = new LinkedList<string>();
-        private readonly LinkedList<string> _scienceQuestions = new LinkedList<string>();
-        private readonly LinkedList<string> _sportsQuestions = new LinkedList<string>();
-        private readonly LinkedList<string> _rockQuestions = new LinkedList<string>();
 
         private int _currentPlayer;
         private bool _isGettingOutOfPenaltyBox;
@@ -40,18 +31,7 @@ namespace Trivia
             _gameOutput = gameOutput;
             _players = new Players(_gameOutput);
             _places = new Places(_gameOutput);
-            for (var i = 0; i < 50; i++)
-            {
-                _popQuestions.AddLast("Pop Question " + i);
-                _scienceQuestions.AddLast(("Science Question " + i));
-                _sportsQuestions.AddLast(("Sports Question " + i));
-                _rockQuestions.AddLast(CreateRockQuestion(i));
-            }
-        }
-
-        public string CreateRockQuestion(int index)
-        {
-            return "Rock Question " + index;
+            _questions = new Questions(_gameOutput);
         }
 
         public bool IsPlayable()
@@ -167,26 +147,7 @@ namespace Trivia
 
         private void AskQuestion()
         {
-            if (CurrentCategory() == "Pop")
-            {
-                OutputMessage(_popQuestions.First());
-                _popQuestions.RemoveFirst();
-            }
-            if (CurrentCategory() == "Science")
-            {
-                OutputMessage(_scienceQuestions.First());
-                _scienceQuestions.RemoveFirst();
-            }
-            if (CurrentCategory() == "Sports")
-            {
-                OutputMessage(_sportsQuestions.First());
-                _sportsQuestions.RemoveFirst();
-            }
-            if (CurrentCategory() == "Rock")
-            {
-                OutputMessage(_rockQuestions.First());
-                _rockQuestions.RemoveFirst();
-            }
+            _questions.AskQuestionFor(_players.CurrentPlayer());
         }
 
         protected virtual void OutputMessage(string message)

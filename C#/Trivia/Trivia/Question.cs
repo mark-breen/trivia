@@ -1,68 +1,51 @@
-﻿using System.Security.Cryptography.X509Certificates;
+﻿using System.Collections.Generic;
 
 namespace Trivia
 {
-    public interface IQuestion
+    public class Question
     {
-        string Category { get; }
-
-        string QuestionText { get; }
-
-        void CorrectAnswerFor(Player player);
-
-        void IncorrectAnswerFor(Player player);
-    }
-
-    public class PenaltyBoxQuestion : IQuestion
-    {
-        public string Category { get; }
         public string QuestionText { get; }
 
-        public PenaltyBoxQuestion()
+        public Question(string questionText)
         {
-            Category = Categories.Penalty;
-            QuestionText = "Penalty Box - no question asked";
-        }
-
-        public void CorrectAnswerFor(Player player)
-        {
-            // Do nothing
-        }
-
-        public void IncorrectAnswerFor(Player player)
-        {
-            // Do nothing
-        }
-    }
-
-    public class Question : IQuestion
-    {
-        public string Category { get; }
-        public string QuestionText { get; }
-
-        public Question(string category, string questionText)
-        {
-            Category = category;
             QuestionText = questionText;
         }
-
-        public void CorrectAnswerFor(Player player)
-        {
-            player.WinsGoldCoin();
-        }
-
-        public void IncorrectAnswerFor(Player player)
-        {
-            // SEND PLAYER TO PENALTY BOX!
-        }
     }
 
-    public class Categories
+    public class Questions
     {
-        public const string Penalty = "Penalty";
-        public const string Pop = "Pop";
-        public const string Sports = "Sports";
-        public const string Rock = "Rock";
-        public const string Science = "Science";
+        private readonly IGameOutput _gameOutput;
+
+        private readonly Dictionary<string, LinkedList<Question>> _questions = new Dictionary<string, LinkedList<Question>>
+        {
+            { Categories.Pop, new LinkedList<Question>() },
+            { Categories.Science, new LinkedList<Question>() },
+            { Categories.Sports, new LinkedList<Question>() },
+            { Categories.Rock, new LinkedList<Question>() },
+        };
+
+        public Questions(IGameOutput gameOutput)
+        {
+            _gameOutput = gameOutput;
+            for (var i = 0; i < 50; i++)
+            {
+                AddQuestionFor(Categories.Pop, i);
+                AddQuestionFor(Categories.Science, i);
+                AddQuestionFor(Categories.Sports, i);
+                AddQuestionFor(Categories.Rock, i);
+            }
+        }
+
+        public void AskQuestionFor(Player currentPlayer)
+        {
+            var questions = _questions[currentPlayer.CurrentPlace.Category];
+            _gameOutput.OutputMessage(questions.First.Value.QuestionText);
+            questions.RemoveFirst();
+        }
+
+        private void AddQuestionFor(string category, int questionNo)
+        {
+            _questions[category].AddLast(new Question($"{category} Question {questionNo}"));
+        }
     }
 }
